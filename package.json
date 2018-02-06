@@ -1,0 +1,23 @@
+{
+  "name": "primestables",
+  "version": "1.0.0",
+  "description": "Programming Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mantinone/PrimesTables.git"
+  },
+  "author": "mantinone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mantinone/PrimesTables/issues"
+  },
+  "homepage": "https://github.com/mantinone/PrimesTables#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.0"
+  }
+}
