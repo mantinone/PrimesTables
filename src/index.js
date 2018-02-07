@@ -1,1 +1,5 @@
-//TODO add code
+const nPrimes = ( n ) => {
+  return []
+}
+
+module.exports = { nPrimes }
