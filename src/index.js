@@ -17,7 +17,18 @@ const checkPrime = ( p ) => {
 }
 
 const nPrimes = ( n ) => {
+  if( n < 1 || n%1 !== 0){
+    return 'nPrimes requires a Positive Integer'
+  }
+
   let primeList = []
+  let i = 2
+  while( primeList.length < n ){
+    if( checkPrime(i) ){
+      primeList.push( i )
+    }
+    i++
+  }
 
   return primeList
 }
