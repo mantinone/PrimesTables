@@ -5,14 +5,19 @@ const {nPrimes, checkPrime} = require('../src/index.js')
 describe('The checkPrime function', () => {
   it('Should return true for prime numbers', () => {
     expect(checkPrime(2)).to.be.true
+    expect(checkPrime(3)).to.be.true
     expect(checkPrime(5)).to.be.true
+    expect(checkPrime(7)).to.be.true
     expect(checkPrime(11)).to.be.true
     expect(checkPrime(127)).to.be.true
     expect(checkPrime(199)).to.be.true
   })
 
   it('Should return false for non prime integers', () => {
+    expect(checkPrime(1)).to.be.false
     expect(checkPrime(4)).to.be.false
+    expect(checkPrime(6)).to.be.false
+    expect(checkPrime(8)).to.be.false
     expect(checkPrime(27)).to.be.false
     expect(checkPrime(100)).to.be.false
     expect(checkPrime(5.5)).to.be.false
