@@ -34,8 +34,23 @@ const nPrimes = ( n ) => {
 }
 
 const timesTable = ( numberArray ) => {
+  //Print out first row
+  let table = 'x '
+  for( i of numberArray ){
+    table += `${i} `
+  }
+  table += '\n'
 
-  return numberArray
+  //Now print the table 
+  for( i of numberArray ){
+    table += `${i} `
+    for( j of numberArray){
+      table += `${i*j} `
+    }
+    table += '\n'
+  }
+
+  return table
 }
 
 console.log( timesTable(nPrimes(10)) );

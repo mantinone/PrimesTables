@@ -51,9 +51,9 @@ describe('The nPrimes function', () => {
 
 describe('The timesTable function', () => {
   it('Should print out a multiplication table given an array of numbers', () => {
-    expect(timesTable([1,2,3])).to.eql("x 1 2 3 \n 1 1 2 3 \n 2 2 4 6 \n 3 6 9")
-    expect(timesTable([1])).to.eql("x 1 \n 1 1")
-    expect(timesTable([2,5,7])).to.eql("x 2 5 7 \n 2 4 10 14 \n 5 10 25 35 \n 7 14 35 49")
+    expect(timesTable([1,2,3])).to.eql("x 1 2 3 \n1 1 2 3 \n2 2 4 6 \n3 3 6 9 \n")
+    expect(timesTable([4])).to.eql("x 4 \n4 16 \n")
+    expect(timesTable([2,5,7])).to.eql("x 2 5 7 \n2 4 10 14 \n5 10 25 35 \n7 14 35 49 \n")
 
   })
 
