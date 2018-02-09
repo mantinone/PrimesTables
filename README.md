@@ -7,7 +7,7 @@ To run the tests, just enter `npm test` in the command line.  To print out the m
 
 
 
-The project contains three functions.
+### The project contains three functions.
 
 `checkPrimes( number )` takes any integer and returns true if it's prime and false if it isn't (or false if it's an invalid input)
 
