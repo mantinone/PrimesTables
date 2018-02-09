@@ -35,19 +35,19 @@ const nPrimes = ( n ) => {
 
 const timesTable = ( numberArray ) => {
   //Print out first row
-  let table = 'x '
+  let table = 'x\t'
   for( i of numberArray ){
-    table += `${i} `
+    table += `${i}\t`
   }
-  table += '\n'
+  table += '\n\n'
 
-  //Now print the table 
+  //Now print the table
   for( i of numberArray ){
-    table += `${i} `
+    table += `${i}\t`
     for( j of numberArray){
-      table += `${i*j} `
+      table += `${i*j}\t`
     }
-    table += '\n'
+    table += '\n\n'
   }
 
   return table
