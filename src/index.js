@@ -1,11 +1,9 @@
 const checkPrime = ( p ) => {
   if( p < 2 || p%1 !== 0 ){
     return false
-  } //else if ( p <= 3){
-  //   return true
-  // } else if ( p%2 === 0 || p%3 === 0){
-  //   return false
-  // }
+  } else if ( p <= 3){
+     return true
+   } 
   let i = 2
   while( i*i <= p ){
     if( p%i === 0){
@@ -34,26 +32,27 @@ const nPrimes = ( n ) => {
 }
 
 const timesTable = ( numberArray ) => {
-  //Print out first row
+  //Build out first row
   let table = 'x\t'
   for( i of numberArray ){
     table += `${i}\t`
   }
   table += '\n\n'
 
-  //Now print the table
+  //Now build the table
   for( i of numberArray ){
     table += `${i}\t`
     for( j of numberArray){
-      table += `${i*j}\t`
+      let product = i*j
+      if( product != product ){
+        return "Some inputs were not numbers"
+      }
+      table += `${product}\t`
     }
     table += '\n\n'
   }
 
   return table
 }
-
-console.log( timesTable(nPrimes(10)) );
-
 
 module.exports = { nPrimes, checkPrime, timesTable }

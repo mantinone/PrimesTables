@@ -33,7 +33,7 @@ describe('The checkPrime function', () => {
 })
 
 describe('The nPrimes function', () => {
-  it('Should take return an array of the first N primes, where N is a positive integer', () => {
+  it('Should return an array of the first N primes, where N is a positive integer', () => {
     expect(nPrimes(1)).to.eql([2])
     expect(nPrimes(5)).to.eql([2,3,5,7,11])
     expect(nPrimes(10)).to.eql([2,3,5,7,11,13,17,19,23,29])
@@ -57,8 +57,8 @@ describe('The timesTable function', () => {
   })
 
   it("Displays an error if you don't give it an array of numbers", () => {
-    expect(timesTable("bloop")).to.eql('')
-    expect(timesTable([1,"a"])).to.eql('')
+    expect(timesTable("bloop")).to.eql("Some inputs were not numbers")
+    expect(timesTable([1,"a"])).to.eql("Some inputs were not numbers")
   })
 })
 
