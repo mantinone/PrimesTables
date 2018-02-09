@@ -1,6 +1,6 @@
 const chai = require('chai')
 const expect = chai.expect
-const {nPrimes, checkPrime} = require('../src/index.js')
+const {nPrimes, checkPrime, timesTable} = require('../src/index.js')
 
 describe('The checkPrime function', () => {
   it('Should return true for prime numbers', () => {
@@ -48,3 +48,18 @@ describe('The nPrimes function', () => {
   })
 
 })
+
+describe('The timesTable function', () => {
+  it('Should print out a multiplication table given an array of numbers', () => {
+    expect(timesTable([1,2,3])).to.eql("x 1 2 3 \n 1 1 2 3 \n 2 2 4 6 \n 3 6 9")
+    expect(timesTable([1])).to.eql("x 1 \n 1 1")
+    expect(timesTable([2,5,7])).to.eql("x 2 5 7 \n 2 4 10 14 \n 5 10 25 35 \n 7 14 35 49")
+
+  })
+
+  it("Displays an error if you don't give it an array of numbers", () => {
+    expect(timesTable("bloop")).to.eql('')
+    expect(timesTable([1,"a"])).to.eql('')
+  })
+})
+

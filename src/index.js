@@ -33,6 +33,12 @@ const nPrimes = ( n ) => {
   return primeList
 }
 
+const timesTable = ( numberArray ) => {
+
+  return numberArray
+}
+
+console.log( timesTable(nPrimes(10)) );
 
 
-module.exports = { nPrimes, checkPrime }
+module.exports = { nPrimes, checkPrime, timesTable }
