@@ -1,6 +1,6 @@
 const chai = require('chai')
 const expect = chai.expect
-const {nPrimes, checkPrime} = require('../src/index.js')
+const {nPrimes, checkPrime, timesTable} = require('../src/index.js')
 
 describe('The checkPrime function', () => {
   it('Should return true for prime numbers', () => {
@@ -33,7 +33,7 @@ describe('The checkPrime function', () => {
 })
 
 describe('The nPrimes function', () => {
-  it('Should take return an array of the first N primes, where N is a positive integer', () => {
+  it('Should return an array of the first N primes, where N is a positive integer', () => {
     expect(nPrimes(1)).to.eql([2])
     expect(nPrimes(5)).to.eql([2,3,5,7,11])
     expect(nPrimes(10)).to.eql([2,3,5,7,11,13,17,19,23,29])
@@ -48,3 +48,17 @@ describe('The nPrimes function', () => {
   })
 
 })
+
+describe('The timesTable function', () => {
+  it('Should print out a multiplication table given an array of numbers', () => {
+    expect(timesTable([1,2,3])).to.eql("x\t1\t2\t3\t\n\n1\t1\t2\t3\t\n\n2\t2\t4\t6\t\n\n3\t3\t6\t9\t\n\n")
+    expect(timesTable([4])).to.eql("x\t4\t\n\n4\t16\t\n\n")
+    expect(timesTable([2,5,7])).to.eql("x\t2\t5\t7\t\n\n2\t4\t10\t14\t\n\n5\t10\t25\t35\t\n\n7\t14\t35\t49\t\n\n")
+  })
+
+  it("Displays an error if you don't give it an array of numbers", () => {
+    expect(timesTable("bloop")).to.eql("Some inputs were not numbers")
+    expect(timesTable([1,"a"])).to.eql("Some inputs were not numbers")
+  })
+})
+
